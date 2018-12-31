@@ -14,3 +14,17 @@ def prime (n):
   else:
     return False
 #print(prime(2))
+
+def nth (n):
+  p_count = 0
+  inp = 1 
+  while p_count < n:
+    if prime(inp) == True:
+      inp += 1
+      p_count += 1
+    else:
+      inp += 1
+  r_inp = inp - 1
+  return r_inp
+
+print(nth(1000))
