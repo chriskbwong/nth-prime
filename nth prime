@@ -1,0 +1,16 @@
+def prime (n):
+  div_count = 0 
+  div = 1
+  if n == 1 or n < 1:
+    return False
+  while div_count < 2:
+    if n % div == 0:
+      div_count = div_count + 1
+      div = div + 1
+    else:
+      div = div + 1
+  if (div-1) == n: # the minus one handles the count that is added after
+    return True
+  else:
+    return False
+#print(prime(2))
